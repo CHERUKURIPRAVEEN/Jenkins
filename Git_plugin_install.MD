@@ -18,8 +18,3 @@ Install git packages on jenkins server
   - `Manage Jenkins` > `Global Tool Configuration` > `git`
 
 #### Next Steps
-
-- [x] [Configure Users & Groups in Jenkins](https://youtu.be/jZOqcB32dYM)
-- [x] [Secure your Jenkins Server](https://youtu.be/19FmJumnkDc)
-- [x] [Jenkins Plugin Installation](https://youtu.be/p_PqPBbjaZ4)
-- [x] [Jenkins Master-Slave Configuration](https://youtu.be/hwrYURP4O2k)
