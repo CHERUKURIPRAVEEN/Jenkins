@@ -50,7 +50,7 @@ Configure the node as shown here
 1. Under Build section
    Execute shell
    ```sh
-   echo "welcome to jenkis slave"
+   echo "welcome to jenkins slave"
    ```
 1. Save your job 
 2. Build job
