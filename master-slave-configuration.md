@@ -16,7 +16,7 @@ apt-get install java-1.8*
 ## Setup Jenkins Slave
 ```sh
 # Create user and add the user to wheel group
-useradd jenkins-slave-01
+adduser jenkins-slave-01
 # Create SSH Keys
 sudo su - jenkins-slave-01
 ssh-keygen 
