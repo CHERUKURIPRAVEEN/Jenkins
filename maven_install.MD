@@ -1,10 +1,8 @@
 #  Install & configure Maven build tool on Jenkins
 Maven is a code build tool which used to convert your code to artifact. this is widely used plugin to build in continuous integration
 
-#### Follow this artical in **[YouTube]()**
-
 #### Prerequisites
-1. Jenkins server **[Get Help Here]()
+1. Jenkins server 
 
 #### Install Maven on Jenkins
 Download maven packages https://maven.apache.org/download.cgi onto Jenkins server. In this case I am using /opt/maven as my installation directory
@@ -40,4 +38,4 @@ So far you have completed installation of maven software to support maven plugin
 - Configure java path
   - `Manage Jenkins` > `Global Tool Configuration` > `Maven`
 
-#### Next Steps
+
