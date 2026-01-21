@@ -9,7 +9,7 @@ The hooks automatically run checks (e.g., secrets scanning, Dockerfile validatio
 
 All hook scripts are stored under:
 
-pre_commit_hooks/
+  pre_commit_hooks/
     ├── pre-commit
     ├── pre-commit-secrets-scan.sample
     ├── pre-commit-dcofile.sample
