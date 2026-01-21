@@ -28,13 +28,13 @@ bash setup-hooks.sh
 This script configures Git to use the shared hooks folder:
 
 🧩 Configuring Git hooks path...
-✅ Done! Hooks path set to devops/hooks
-After this setup, Git will automatically run hooks from devops/hooks/ instead of .git/hooks/.
+✅ Done! Hooks path set to pre_commit_hooks
+After this setup, Git will automatically run hooks from pre_commit_hooks/ instead of .git/hooks/.
 
 📘 Manual Setup (if needed)
 If you prefer to configure manually, run:
 
-git config core.hooksPath devops/hooks
+git config core.hooksPath pre_commit_hooks
 This writes the following setting to your local .git/config:
 
 [core]
@@ -61,7 +61,7 @@ Use this carefully — hooks are there to enforce code quality and security chec
 ```
 
 🧠 Why This Setup
-✅ Hooks are version-controlled (devops/hooks/)
+✅ Hooks are version-controlled (pre_commit_hooks/)
 
 ✅ No need to copy to .git/hooks/ manually
 
@@ -75,8 +75,8 @@ Use this carefully — hooks are there to enforce code quality and security chec
 # setup-hooks.sh - one-time setup for Git hooks
 
 echo "🧩 Configuring Git hooks path..."
-git config core.hooksPath devops/hooks
-echo "✅ Done! Hooks path set to devops/hooks"
+git config core.hooksPath pre_commit_hooks
+echo "✅ Done! Hooks path set to pre_commit_hooks"
 ```
 
 🧪 Verification
