@@ -8,13 +8,13 @@ The hooks automatically run checks (e.g., secrets scanning, Dockerfile validatio
 ## ⚙️ Hook Folder Structure
 
 All hook scripts are stored under:
-
+```
   pre_commit_hooks/
     ├── pre-commit
     ├── pre-commit-secrets-scan.sample
     ├── pre-commit-dcofile.sample
     └── pre-commit-yaml-syntax.sample
-
+```
 
 These scripts are **version-controlled** and shared with everyone in the team.
 
