@@ -24,7 +24,6 @@ These scripts are **version-controlled** and shared with everyone in the team.
 
 To enable the hooks locally, run the setup script once after cloning the repository:
 
-```bash
 bash setup-hooks.sh
 This script configures Git to use the shared hooks folder:
 
@@ -39,7 +38,7 @@ git config core.hooksPath devops/hooks
 This writes the following setting to your local .git/config:
 
 [core]
-    hooksPath = devops/hooks
+    hooksPath = pre_commit_hooks
 ⚠️ This setting is local — it’s not version-controlled.
 Each new clone must either run the setup script or re-run the command above.
 
@@ -49,16 +48,17 @@ Whenever new hook scripts are added or modified:
 Pull the latest changes:
 
 git pull
-Verify hooks path (should show devops/hooks):
+Verify hooks path (should show pre_commit_hooks):
 
 git config core.hooksPath
 No further setup is required — the hooks update automatically.
 
 🚫 Bypassing Hooks (for emergencies only)
 If you need to skip hooks temporarily (e.g., emergency fix), use:
-
+```
 git commit -m "message" --no-verify
 Use this carefully — hooks are there to enforce code quality and security checks.
+```
 
 🧠 Why This Setup
 ✅ Hooks are version-controlled (devops/hooks/)
@@ -70,27 +70,32 @@ Use this carefully — hooks are there to enforce code quality and security chec
 ✅ Easy one-time setup via setup-hooks.sh
 
 💡 Example: setup-hooks.sh
+```
 #!/usr/bin/env bash
 # setup-hooks.sh - one-time setup for Git hooks
 
 echo "🧩 Configuring Git hooks path..."
 git config core.hooksPath devops/hooks
 echo "✅ Done! Hooks path set to devops/hooks"
+```
+
 🧪 Verification
 After setup, you can confirm the hooks are active by running:
-
+```
 git config core.hooksPath
 Output:
 
-devops/hooks
+pre_commit_hooks
+````
 Now your hooks will automatically run before every commit. 🚀
 
 👩‍💻 Maintainer Notes
 Hook updates should be tested locally before pushing.
 
 If adding new hooks, make sure they are executable:
-
-chmod +x devops/hooks/*
+```
+chmod +x pre_commit_hooks/*
+```
 Hooks should exit with a non-zero status to block commits when validation fails.
 
 Enjoy automated DevOps quality checks! 🧩
